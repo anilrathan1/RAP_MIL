@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Dispatch Register",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Dispatch Register"
+  },
+  "ui5AppDetails": {
+    "appId": "zdr"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_827A4E27AADFAEC153CA7E93342AC37EE654F485_TM",
+    "semanticObject": "zdr",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_827A4E27AADFAEC153CA7E93342AC37EE654F485_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Dispatch Register",
+        "subtitle": "DR"
+      }
+    }
+  ]
+}

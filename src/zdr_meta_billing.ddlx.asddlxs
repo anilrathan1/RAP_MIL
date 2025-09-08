@@ -1,0 +1,640 @@
+@Metadata.layer: #CORE
+annotate entity ZDR_C_BILLINGITEM with
+{
+  @UI.facet: [ {
+  id: 'idIdentification',
+  type: #IDENTIFICATION_REFERENCE,
+  label: 'Dispatch Register',
+  position: 10
+  } ]
+  @UI.lineItem: [ {
+    position: 10 ,
+    importance: #MEDIUM,
+    label: 'Invoice Number'
+  } ]
+  @UI.identification: [ {
+    position: 10 ,
+    label: 'Invoice Number'
+  } ]
+
+  BillingDocument;
+  @UI.lineItem: [{ position: 20, importance: #MEDIUM, label: 'Billing Document Item' }]
+  @UI.identification: [{ position: 20, label: 'Billing Document Item' }]
+  BillingDocumentItem;
+
+  @UI.lineItem: [{ position: 30, importance: #MEDIUM, label: 'Sales SD Document Category' }]
+  @UI.identification: [{ position: 30, label: 'Sales SD Document Category' }]
+  SalesSDDocumentCategory;
+
+  @UI.lineItem: [{ position: 40, importance: #MEDIUM, label: 'Billing Document Item Text' }]
+  @UI.identification: [{ position: 40, label: 'Billing Document Item Text' }]
+  BillingDocumentItemText;
+
+  @UI.lineItem: [{ position: 50, importance: #MEDIUM, label: 'Division' }]
+  @UI.identification: [{ position: 50, label: 'Division' }]
+  Division;
+
+  @UI.lineItem: [{ position: 60, importance: #MEDIUM, label: 'Sales Office' }]
+  @UI.identification: [{ position: 60, label: 'Sales Office' }]
+  SalesOffice;
+
+  @UI.lineItem: [{ position: 70, importance: #MEDIUM, label: 'Batch' }]
+  @UI.identification: [{ position: 70, label: 'Batch' }]
+  Batch;
+
+  @UI.lineItem: [{ position: 80, importance: #MEDIUM, label: 'Plant' }]
+  @UI.identification: [{ position: 80, label: 'Plant' }]
+  Plant;
+
+  @UI.lineItem: [{ position: 90, importance: #MEDIUM, label: 'Plant Region' }]
+  @UI.identification: [{ position: 90, label: 'Plant Region' }]
+  PlantRegion;
+
+  @UI.lineItem: [{ position: 100, importance: #MEDIUM, label: 'Plant County' }]
+  @UI.identification: [{ position: 100, label: 'Plant County' }]
+  PlantCounty;
+
+  @UI.lineItem: [{ position: 110, importance: #MEDIUM, label: 'Plant City' }]
+  @UI.identification: [{ position: 110, label: 'Plant City' }]
+  PlantCity;
+
+  @UI.lineItem: [{ position: 120, importance: #MEDIUM, label: 'Billing Quantity' }]
+  @UI.identification: [{ position: 120, label: 'Billing Quantity' }]
+  BillingQuantity;
+
+  @UI.lineItem: [{ position: 130, importance: #MEDIUM, label: 'Billing Quantity Unit' }]
+  @UI.identification: [{ position: 130, label: 'Billing Quantity Unit' }]
+  BillingQuantityUnit;
+
+  @UI.lineItem: [{ position: 140, importance: #MEDIUM, label: 'Bill-To Party Region' }]
+  @UI.identification: [{ position: 140, label: 'Bill-To Party Region' }]
+  BillToPartyRegion;
+
+  @UI.lineItem: [{ position: 150, importance: #MEDIUM, label: 'Net Amount' }]
+  @UI.identification: [{ position: 150, label: 'Net Amount' }]
+  NetAmount;
+
+  @UI.lineItem: [{ position: 160, importance: #MEDIUM, label: 'Transaction Currency' }]
+  @UI.identification: [{ position: 160, label: 'Transaction Currency' }]
+  TransactionCurrency;
+
+  //@UI.lineItem: [{ position: 170, importance: #MEDIUM, label: 'hsn code' }]
+  //@UI.identification: [{ position: 170, label: 'hsn code' }]
+  //hsncode;
+
+  @UI.lineItem: [{ position: 170, importance: #MEDIUM, label: 'Gross Amount' }]
+  @UI.identification: [{ position: 170, label: 'Gross Amount' }]
+  GrossAmount;
+
+  @UI.lineItem: [{ position: 180, importance: #MEDIUM, label: 'Tax Amount' }]
+  @UI.identification: [{ position: 180, label: 'Tax Amount' }]
+  TaxAmount;
+
+  @UI.lineItem: [{ position: 190, importance: #MEDIUM, label: 'Profit Center' }]
+  @UI.identification: [{ position: 190, label: 'Profit Center' }]
+  ProfitCenter;
+
+
+  @UI.lineItem: [{ position: 200, importance: #MEDIUM, label: 'Business Area' }]
+  @UI.identification: [{ position: 200, label: 'Business Area' }]
+  BusinessArea;
+
+  @UI.lineItem: [{ position: 210, importance: #MEDIUM, label: 'Origin SD Document' }]
+  @UI.identification: [{ position: 210, label: 'Origin SD Document' }]
+  OriginSDDocument;
+
+  @UI.lineItem: [{ position: 220, importance: #MEDIUM, label: 'Origin SD Document Item' }]
+  @UI.identification: [{ position: 220, label: 'Origin SD Document Item' }]
+  OriginSDDocumentItem;
+
+  @UI.lineItem: [{ position: 230, importance: #MEDIUM, label: 'Reference SD Document' }]
+  @UI.identification: [{ position: 230, label: 'Reference SD Document' }]
+  ReferenceSDDocument;
+
+  @UI.lineItem: [{ position: 240, importance: #MEDIUM, label: 'Reference SD Document Item' }]
+  @UI.identification: [{ position: 240, label: 'Reference SD Document Item' }]
+  ReferenceSDDocumentItem;
+
+  @UI.lineItem: [{ position: 250, importance: #MEDIUM, label: 'Sales Document' }]
+  @UI.identification: [{ position: 250, label: 'Sales Document' }]
+  SalesDocument;
+
+  @UI.lineItem: [{ position: 260, importance: #MEDIUM, label: 'Sales Document Item' }]
+  @UI.identification: [{ position: 260, label: 'Sales Document Item' }]
+  SalesDocumentItem;
+
+  @UI.lineItem: [{ position: 270, importance: #MEDIUM, label: 'Shipping Point' }]
+  @UI.identification: [{ position: 270, label: 'Shipping Point' }]
+  ShippingPoint;
+
+  @UI.lineItem: [{ position: 280, importance: #MEDIUM, label: 'Billing Document Type' }]
+  @UI.identification: [{ position: 280, label: 'Billing Document Type' }]
+  BillingDocumentType;
+
+  @UI.lineItem: [{ position: 290, importance: #MEDIUM, label: 'Sales Organization' }]
+  @UI.identification: [{ position: 290, label: 'Sales Organization' }]
+  SalesOrganization;
+
+  @UI.lineItem: [{ position: 300, importance: #MEDIUM, label: 'Distribution Channel' }]
+  @UI.identification: [{ position: 300, label: 'Distribution Channel' }]
+  DistributionChannel;
+
+  @UI.lineItem: [{ position: 310, importance: #MEDIUM, label: 'Region' }]
+  @UI.identification: [{ position: 310, label: 'Region' }]
+  Region;
+
+  @UI.lineItem: [{ position: 320, importance: #MEDIUM, label: 'Country' }]
+  @UI.identification: [{ position: 320, label: 'Country' }]
+  Country;
+
+  @UI.lineItem: [{ position: 330, importance: #MEDIUM, label: 'Sold-To Party' }]
+  @UI.identification: [{ position: 330, label: 'Sold-To Party' }]
+  SoldToParty;
+
+  @UI.lineItem: [{ position: 340, importance: #MEDIUM, label: 'Payer Party' }]
+  @UI.identification: [{ position: 340, label: 'Payer Party' }]
+  PayerParty;
+
+
+  @UI.lineItem: [{ position: 350, importance: #MEDIUM, label: 'Billing Document Date' }]
+  @UI.identification: [{ position: 350, label: 'Billing Document Date' }]
+  BillingDocumentDate;
+
+  @UI.lineItem: [{ position: 360, importance: #MEDIUM, label: 'Company Code' }]
+  @UI.identification: [{ position: 360, label: 'Company Code' }]
+  CompanyCode;
+
+  @UI.lineItem: [{ position: 370, importance: #MEDIUM, label: 'Ship-To Party' }]
+  @UI.identification: [{ position: 370, label: 'Ship-To Party' }]
+  ShipToParty;
+
+  @UI.lineItem: [{ position: 380, importance: #MEDIUM, label: 'Bill-To Party' }]
+  @UI.identification: [{ position: 380, label: 'Bill-To Party' }]
+  BillToParty;
+
+  @UI.lineItem: [{ position: 390, importance: #MEDIUM, label: 'Cancelled Billing Document' }]
+  @UI.identification: [{ position: 390, label: 'Cancelled Billing Document' }]
+  CancelledBillingDocument;
+
+  @UI.lineItem: [{ position: 400, importance: #MEDIUM, label: 'Is Billing Document Cancelled?' }]
+  @UI.identification: [{ position: 400, label: 'Is Billing Document Cancelled?' }]
+  BillingDocumentIsCancelled;
+
+  @UI.lineItem: [{ position: 410, importance: #MEDIUM, label: 'Customer Tax Classification 1' }]
+  @UI.identification: [{ position: 410, label: 'Customer Tax Classification 1' }]
+  CustomerTaxClassification1;
+
+  @UI.lineItem: [{ position: 420, importance: #MEDIUM, label: 'Customer Tax Classification 2' }]
+  @UI.identification: [{ position: 420, label: 'Customer Tax Classification 2' }]
+  CustomerTaxClassification2;
+
+  @UI.lineItem: [{ position: 430, importance: #MEDIUM, label: 'Incoterms Version' }]
+  @UI.identification: [{ position: 430, label: 'Incoterms Version' }]
+  IncotermsVersion;
+
+  @UI.lineItem: [{ position: 440, importance: #MEDIUM, label: 'Incoterms Classification' }]
+  @UI.identification: [{ position: 440, label: 'Incoterms Classification' }]
+  IncotermsClassification;
+
+  @UI.lineItem: [{ position: 450, importance: #MEDIUM, label: 'Incoterms Transfer Location' }]
+  @UI.identification: [{ position: 450, label: 'Incoterms Transfer Location' }]
+  IncotermsTransferLocation;
+
+  @UI.lineItem: [{ position: 460, importance: #MEDIUM, label: 'Incoterms Location 1' }]
+  @UI.identification: [{ position: 460, label: 'Incoterms Location 1' }]
+  IncotermsLocation1;
+
+  @UI.lineItem: [{ position: 470, importance: #MEDIUM, label: 'Incoterms Location 2' }]
+  @UI.identification: [{ position: 470, label: 'Incoterms Location 2' }]
+  IncotermsLocation2;
+
+  @UI.lineItem: [{ position: 480, importance: #MEDIUM, label: 'Payer Party' }]
+  @UI.identification: [{ position: 480, label: 'Payer Party' }]
+  payer_party;
+
+
+  @UI.lineItem: [{ position: 490, importance: #MEDIUM, label: 'Customer Payment Terms' }]
+  @UI.identification: [{ position: 490, label: 'Customer Payment Terms' }]
+  CustomerPaymentTerms;
+
+  @UI.lineItem: [{ position: 500, importance: #MEDIUM, label: 'Payment Reference' }]
+  @UI.identification: [{ position: 500, label: 'Payment Reference' }]
+  PaymentReference;
+
+  @UI.lineItem: [{ position: 510, importance: #MEDIUM, label: 'Fiscal Year' }]
+  @UI.identification: [{ position: 510, label: 'Fiscal Year' }]
+  FiscalYear;
+
+  @UI.lineItem: [{ position: 520, importance: #MEDIUM, label: 'Accounting Document' }]
+  @UI.identification: [{ position: 520, label: 'Accounting Document' }]
+  AccountingDocument;
+
+  @UI.lineItem: [{ position: 530, importance: #MEDIUM, label: 'Fiscal Period' }]
+  @UI.identification: [{ position: 530, label: 'Fiscal Period' }]
+  FiscalPeriod;
+
+  @UI.lineItem: [{ position: 540, importance: #MEDIUM, label: 'Customer Account Assignment Group' }]
+  @UI.identification: [{ position: 540, label: 'Customer Account Assignment Group' }]
+  CustomerAccountAssignmentGroup;
+
+  @UI.lineItem: [{ position: 550, importance: #MEDIUM, label: 'Customer PO Number' }]
+  @UI.identification: [{ position: 550, label: 'Customer PO Number' }]
+  PurchaseOrderByCustomer;
+
+  @UI.lineItem: [{ position: 560, importance: #MEDIUM, label: 'Credit Control Area' }]
+  @UI.identification: [{ position: 560, label: 'Credit Control Area' }]
+  CreditControlArea;
+
+  @UI.lineItem: [{ position: 570, importance: #MEDIUM, label: 'Overall Billing Status' }]
+  @UI.identification: [{ position: 570, label: 'Overall Billing Status' }]
+  OverallBillingStatus;
+
+  @UI.lineItem: [{ position: 580, importance: #MEDIUM, label: 'Overall SD Process Status' }]
+  @UI.identification: [{ position: 580, label: 'Overall SD Process Status' }]
+  OverallSDProcessStatus;
+
+  @UI.lineItem: [{ position: 590, importance: #MEDIUM, label: 'Accounting Posting Status' }]
+  @UI.identification: [{ position: 590, label: 'Accounting Posting Status' }]
+  AccountingPostingStatus;
+
+
+  @UI.lineItem: [{ position: 600, importance: #MEDIUM, label: 'Accounting Transfer Status' }]
+  @UI.identification: [{ position: 600, label: 'Accounting Transfer Status' }]
+  AccountingTransferStatus;
+
+  @UI.lineItem: [{ position: 610, importance: #MEDIUM, label: 'G/L Account' }]
+  @UI.identification: [{ position: 610, label: 'G/L Account' }]
+  GLAccount;
+
+  @UI.lineItem: [{ position: 620, importance: #MEDIUM, label: 'Customer PO Number (General)' }]
+  @UI.identification: [{ position: 620, label: 'Customer PO Number (General)' }]
+  PurchaseOrderBy_Customer;
+
+  @UI.lineItem: [{ position: 630, importance: #MEDIUM, label: 'Customer PO by Ship-To Party' }]
+  @UI.identification: [{ position: 630, label: 'Customer PO by Ship-To Party' }]
+  PurchaseOrderByShipToParty;
+
+  @UI.lineItem: [{ position: 640, importance: #MEDIUM, label: 'Customer PO Date' }]
+  @UI.identification: [{ position: 640, label: 'Customer PO Date' }]
+  CustomerPurchaseOrderDate;
+
+  @UI.lineItem: [{ position: 650, importance: #MEDIUM, label: 'Order Quantity' }]
+  @UI.identification: [{ position: 650, label: 'Order Quantity' }]
+  OrderQuantity;
+
+  @UI.lineItem: [{ position: 660, importance: #MEDIUM, label: 'Order Quantity Unit' }]
+  @UI.identification: [{ position: 660, label: 'Order Quantity Unit' }]
+  OrderQuantityUnit;
+
+  @UI.lineItem: [{ position: 670, importance: #MEDIUM, label: 'Target Quantity' }]
+  @UI.identification: [{ position: 670, label: 'Target Quantity' }]
+  TargetQuantity;
+
+  @UI.lineItem: [{ position: 680, importance: #MEDIUM, label: 'Target Quantity Unit' }]
+  @UI.identification: [{ position: 680, label: 'Target Quantity Unit' }]
+  TargetQuantityUnit;
+
+  @UI.lineItem: [{ position: 690, importance: #MEDIUM, label: 'Requested Quantity' }]
+  @UI.identification: [{ position: 690, label: 'Requested Quantity' }]
+  RequestedQuantity;
+
+  @UI.lineItem: [{ position: 700, importance: #MEDIUM, label: 'Requested Quantity Unit' }]
+  @UI.identification: [{ position: 700, label: 'Requested Quantity Unit' }]
+  RequestedQuantityUnit;
+
+  @UI.lineItem: [{ position: 710, importance: #MEDIUM, label: 'Departure Country' }]
+  @UI.identification: [{ position: 710, label: 'Departure Country' }]
+  DepartureCountry;
+
+  @UI.lineItem: [{ position: 720, importance: #MEDIUM, label: 'Bill-To Party Country' }]
+  @UI.identification: [{ position: 720, label: 'Bill-To Party Country' }]
+  BillToPartyCountry;
+
+  @UI.lineItem: [{ position: 730, importance: #MEDIUM, label: 'Controlling Area' }]
+  @UI.identification: [{ position: 730, label: 'Controlling Area' }]
+  ControllingArea;
+
+  //  @UI.lineItem: [{ position: 740, importance: #MEDIUM, label: 'Company Code (Alternate)' }]
+  //  @UI.identification: [{ position: 740, label: 'Company Code (Alternate)' }]
+  //  Company_Code;
+  //
+  @UI.lineItem: [{ position: 750, importance: #MEDIUM, label: 'Batch Number' }]
+  @UI.identification: [{ position: 750, label: 'Batch Number' }]
+  batch_number;
+
+  @UI.lineItem: [{ position: 760, importance: #MEDIUM, label: 'Product' }]
+  @UI.identification: [{ position: 760, label: 'Product' }]
+  Product;
+
+  @UI.lineItem: [{ position: 770, importance: #MEDIUM, label: 'Product Group' }]
+  @UI.identification: [{ position: 770, label: 'Product Group' }]
+  ProductGroup;
+
+  @UI.lineItem: [{ position: 780, importance: #MEDIUM, label: 'Customer' }]
+  @UI.identification: [{ position: 780, label: 'Customer' }]
+  Customer;
+
+  @UI.lineItem: [{ position: 790, importance: #MEDIUM, label: 'Tax Number 3' }]
+  @UI.identification: [{ position: 790, label: 'Tax Number 3' }]
+  TaxNumber3;
+
+  @UI.lineItem: [{ position: 800, importance: #MEDIUM, label: 'Customer Full Name' }]
+  @UI.identification: [{ position: 800, label: 'Customer Full Name' }]
+  CustomerFullName;
+
+//  @UI.lineItem: [{ position: 810, importance: #MEDIUM, label: 'Customer Classification' }]
+//  @UI.identification: [{ position: 810, label: 'Customer Classification' }]
+//  CustomerClassification;
+
+  @UI.lineItem: [{ position: 820, importance: #MEDIUM, label: 'SP Tax Number' }]
+  @UI.identification: [{ position: 820, label: 'SP Tax Number' }]
+  SP_TaxNumber;
+
+  @UI.lineItem: [{ position: 830, importance: #MEDIUM, label: 'SP Region' }]
+  @UI.identification: [{ position: 830, label: 'SP Region' }]
+  SP_region;
+
+  @UI.lineItem: [{ position: 840, importance: #MEDIUM, label: 'PP Customer Full Name' }]
+  @UI.identification: [{ position: 840, label: 'PP Customer Full Name' }]
+  PP_CustomerFullName;
+
+  @UI.lineItem: [{ position: 850, importance: #MEDIUM, label: 'PP Tax Number' }]
+  @UI.identification: [{ position: 850, label: 'PP Tax Number' }]
+  PP_TaxNumber;
+
+  @UI.lineItem: [{ position: 860, importance: #MEDIUM, label: 'Customer Name' }]
+  @UI.identification: [{ position: 860, label: 'Customer Name' }]
+  CustomerName;
+
+  @UI.lineItem: [{ position: 870, importance: #MEDIUM, label: 'Customer Name (Alt)' }]
+  @UI.identification: [{ position: 870, label: 'Customer Name (Alt)' }]
+  customer_name;
+
+  @UI.lineItem: [{ position: 880, importance: #MEDIUM, label: 'SP Tax Number (Alt)' }]
+  @UI.identification: [{ position: 880, label: 'SP Tax Number (Alt)' }]
+  sptaxnumber;
+
+  @UI.lineItem: [{ position: 890, importance: #MEDIUM, label: 'SP Street Name' }]
+  @UI.identification: [{ position: 890, label: 'SP Street Name' }]
+  sp_streetname;
+
+  @UI.lineItem: [{ position: 900, importance: #MEDIUM, label: 'SP Postal Code' }]
+  @UI.identification: [{ position: 900, label: 'SP Postal Code' }]
+  sp_postalcode;
+
+  @UI.lineItem: [{ position: 910, importance: #MEDIUM, label: 'SP Region Number' }]
+  @UI.identification: [{ position: 910, label: 'SP Region Number' }]
+  sp_region_num;
+
+  @UI.lineItem: [{ position: 920, importance: #MEDIUM, label: 'SP City Code' }]
+  @UI.identification: [{ position: 920, label: 'SP City Code' }]
+  sp_citycode;
+
+  @UI.lineItem: [{ position: 930, importance: #MEDIUM, label: 'Sold-To City Name' }]
+  @UI.identification: [{ position: 930, label: 'Sold-To City Name' }]
+  sold_cityname;
+  //
+  @UI.lineItem: [{ position: 940, importance: #MEDIUM, label: 'Addressee Full Name' }]
+  @UI.identification: [{ position: 940, label: 'Addressee Full Name' }]
+  AddresseeFullName;
+
+  @UI.lineItem: [{ position: 950, importance: #MEDIUM, label: 'Organization Name 1' }]
+  @UI.identification: [{ position: 950, label: 'Organization Name 1' }]
+  OrganizationName1;
+
+  @UI.lineItem: [{ position: 960, importance: #MEDIUM, label: 'Organization Name 2' }]
+  @UI.identification: [{ position: 960, label: 'Organization Name 2' }]
+  OrganizationName2;
+
+  @UI.lineItem: [{ position: 970, importance: #MEDIUM, label: 'City Name' }]
+  @UI.identification: [{ position: 970, label: 'City Name' }]
+  CityName;
+
+  @UI.lineItem: [{ position: 980, importance: #MEDIUM, label: 'City Number' }]
+  @UI.identification: [{ position: 980, label: 'City Number' }]
+  CityNumber;
+
+  @UI.lineItem: [{ position: 990, importance: #MEDIUM, label: 'Postal Code' }]
+  @UI.identification: [{ position: 990, label: 'Postal Code' }]
+  PostalCode;
+
+  @UI.lineItem: [{ position: 1000, importance: #MEDIUM, label: 'Street' }]
+  @UI.identification: [{ position: 1000, label: 'Street' }]
+  Street;
+
+  @UI.lineItem: [{ position: 1010, importance: #MEDIUM, label: 'Street Name' }]
+  @UI.identification: [{ position: 1010, label: 'Street Name' }]
+  StreetName;
+
+  @UI.lineItem: [{ position: 1020, importance: #MEDIUM, label: 'House Number' }]
+  @UI.identification: [{ position: 1020, label: 'House Number' }]
+  HouseNumber;
+
+  @UI.lineItem: [{ position: 1030, importance: #MEDIUM, label: 'Building' }]
+  @UI.identification: [{ position: 1030, label: 'Building' }]
+  Building;
+
+  @UI.lineItem: [{ position: 1040, importance: #MEDIUM, label: 'Floor' }]
+  @UI.identification: [{ position: 1040, label: 'Floor' }]
+  Floor;
+
+  @UI.lineItem: [{ position: 1050, importance: #MEDIUM, label: 'Room Number' }]
+  @UI.identification: [{ position: 1050, label: 'Room Number' }]
+  RoomNumber;
+
+  @UI.lineItem: [{ position: 1060, importance: #MEDIUM, label: 'SP Country' }]
+  @UI.identification: [{ position: 1060, label: 'SP Country' }]
+  SP_Country;
+
+  @UI.lineItem: [{ position: 1070, importance: #MEDIUM, label: 'Ship-To Party Region' }]
+  @UI.identification: [{ position: 1070, label: 'Ship-To Party Region' }]
+  shiptoparty_region;
+
+  @UI.lineItem: [{ position: 1080, importance: #MEDIUM, label: 'Broker ID' }]
+  @UI.identification: [{ position: 1080, label: 'Broker ID' }]
+  Broker_id;
+  //
+  @UI.lineItem: [{ position: 1090, importance: #MEDIUM, label: 'Billing Qty Base Unit' }]
+  @UI.identification: [{ position: 1090, label: 'Billing Qty Base Unit' }]
+  billingqtybaseunit;
+
+  @UI.lineItem: [{ position: 1100, importance: #MEDIUM, label: 'Billing Qty Unit' }]
+  @UI.identification: [{ position: 1100, label: 'Billing Qty Unit' }]
+  billingqtyunit;
+
+  @UI.lineItem: [{ position: 1110, importance: #MEDIUM, label: 'Billing Quantity In Base Unit' }]
+  @UI.identification: [{ position: 1110, label: 'Billing Quantity In Base Unit' }]
+  BillingQuantityInBaseUnit;
+
+  @UI.lineItem: [{ position: 1120, importance: #MEDIUM, label: 'CBIILING Base Unit' }]
+  @UI.identification: [{ position: 1120, label: 'CBIILING Base Unit' }]
+  cbiilingbaseunit;
+
+  @UI.lineItem: [{ position: 1121, importance: #MEDIUM, label: 'Base Unit' }]
+  @UI.identification: [{ position: 1121, label: 'Base Unit' }]
+  BaseUnit;
+  ////
+
+  @UI.lineItem: [{ position: 1130, importance: #MEDIUM, label: 'GSTIN' }]
+  @UI.identification: [{ position: 1130, label: 'GSTIN' }]
+  Gstin;
+
+  @UI.lineItem: [{ position: 1140, importance: #MEDIUM, label: 'ZBPRRate' }]
+  @UI.identification: [{ position: 1140, label: 'ZBPRRate' }]
+  ZBPRRate;
+
+  @UI.lineItem: [{ position: 1150, importance: #MEDIUM, label: 'ZBPR Amount' }]
+  @UI.identification: [{ position: 1150, label: 'ZBPR Amount' }]
+  ZBPRAmount;
+
+  @UI.lineItem: [{ position: 1160, importance: #MEDIUM, label: 'ZDIG Rate' }]
+  @UI.identification: [{ position: 1160, label: 'ZDIG Rate' }]
+  ZDIGRate;
+
+  @UI.lineItem: [{ position: 1170, importance: #MEDIUM, label: 'ZDIG Amount' }]
+  @UI.identification: [{ position: 1170, label: 'ZDIG Amount' }]
+  ZDIGAmount;
+
+  @UI.lineItem: [{ position: 1180, importance: #MEDIUM, label: 'CGST Rate' }]
+  @UI.identification: [{ position: 1180, label: 'CGST Rate' }]
+  CGSTRate;
+
+  @UI.lineItem: [{ position: 1190, importance: #MEDIUM, label: 'CGST Amount' }]
+  @UI.identification: [{ position: 1190, label: 'CGST Amount' }]
+  CGSTAmount;
+
+  @UI.lineItem: [{ position: 1200, importance: #MEDIUM, label: 'SGST Rate' }]
+  @UI.identification: [{ position: 1200, label: 'SGST Rate' }]
+  SGSTRate;
+
+  @UI.lineItem: [{ position: 1210, importance: #MEDIUM, label: 'SGST Amount' }]
+  @UI.identification: [{ position: 1210, label: 'SGST Amount' }]
+  SGSTAmount;
+
+  @UI.lineItem: [{ position: 1220, importance: #MEDIUM, label: 'IGST Rate' }]
+  @UI.identification: [{ position: 1220, label: 'IGST Rate' }]
+  IGSTRate;
+
+  @UI.lineItem: [{ position: 1230, importance: #MEDIUM, label: 'IGST Amount' }]
+  @UI.identification: [{ position: 1230, label: 'IGST Amount' }]
+  IGSTAmount;
+
+  @UI.lineItem: [{ position: 1240, importance: #MEDIUM, label: 'ZCCG Amount' }]
+  @UI.identification: [{ position: 1240, label: 'ZCCG Amount' }]
+  ZCCGAmount;
+
+  @UI.lineItem: [{ position: 1250, importance: #MEDIUM, label: 'ZCCG Rate' }]
+  @UI.identification: [{ position: 1250, label: 'ZCCG Rate' }]
+  ZCCGRate;
+
+  @UI.lineItem: [{ position: 1260, importance: #MEDIUM, label: 'ZFCG Rate' }]
+  @UI.identification: [{ position: 1260, label: 'ZFCG Rate' }]
+  ZFCGRate;
+
+  @UI.lineItem: [{ position: 1270, importance: #MEDIUM, label: 'ZFCG Amount' }]
+  @UI.identification: [{ position: 1270, label: 'ZFCG Amount' }]
+  ZFCGAmount;
+
+  @UI.lineItem: [{ position: 1280, importance: #MEDIUM, label: 'ZASS Rate' }]
+  @UI.identification: [{ position: 1280, label: 'ZASS Rate' }]
+  ZASSRate;
+
+  @UI.lineItem: [{ position: 1290, importance: #MEDIUM, label: 'ZASS Amount' }]
+  @UI.identification: [{ position: 1290, label: 'ZASS Amount' }]
+  ZASSAmount;
+
+  @UI.lineItem: [{ position: 1300, importance: #MEDIUM, label: 'ZTPG Rate' }]
+  @UI.identification: [{ position: 1300, label: 'ZTPG Rate' }]
+  ZTPGRate;
+
+  @UI.lineItem: [{ position: 1310, importance: #MEDIUM, label: 'ZTPG Amount' }]
+  @UI.identification: [{ position: 1310, label: 'ZTPG Amount' }]
+  ZTPGAmount;
+
+  @UI.lineItem: [{ position: 1320, importance: #MEDIUM, label: 'ZFRA Rate' }]
+  @UI.identification: [{ position: 1320, label: 'ZFRA Rate' }]
+  ZFRARate;
+
+  @UI.lineItem: [{ position: 1330, importance: #MEDIUM, label: 'ZFRA Amount' }]
+  @UI.identification: [{ position: 1330, label: 'ZFRA Amount' }]
+  ZFRAAmount;
+
+  @UI.lineItem: [{ position: 1340, importance: #MEDIUM, label: 'ZINA Rate' }]
+  @UI.identification: [{ position: 1340, label: 'ZINA Rate' }]
+  ZINARate;
+
+  @UI.lineItem: [{ position: 1350, importance: #MEDIUM, label: 'ZINA Amount' }]
+  @UI.identification: [{ position: 1350, label: 'ZINA Amount' }]
+  ZINAAmount;
+
+  @UI.lineItem: [{ position: 1360, importance: #MEDIUM, label: 'ZOUA Rate' }]
+  @UI.identification: [{ position: 1360, label: 'ZOUA Rate' }]
+  ZOUARate;
+
+  @UI.lineItem: [{ position: 1370, importance: #MEDIUM, label: 'ZOUA Amount' }]
+  @UI.identification: [{ position: 1370, label: 'ZOUA Amount' }]
+  ZOUAAmount;
+
+  @UI.lineItem: [{ position: 1380, importance: #MEDIUM, label: 'ZDIA Rate' }]
+  @UI.identification: [{ position: 1380, label: 'ZDIA Rate' }]
+  ZDIARate;
+
+  @UI.lineItem: [{ position: 1390, importance: #MEDIUM, label: 'ZDIA Amount' }]
+  @UI.identification: [{ position: 1390, label: 'ZDIA Amount' }]
+  ZDIAAmount;
+
+  @UI.lineItem: [{ position: 1400, importance: #MEDIUM, label: 'ZCEA Rate' }]
+  @UI.identification: [{ position: 1400, label: 'ZCEA Rate' }]
+  ZCEARate;
+
+  @UI.lineItem: [{ position: 1410, importance: #MEDIUM, label: 'ZCEA Amount' }]
+  @UI.identification: [{ position: 1410, label: 'ZCEA Amount' }]
+  ZCEAAmount;
+
+  @UI.lineItem: [{ position: 1420, importance: #MEDIUM, label: 'JTC1A Rate' }]
+  @UI.identification: [{ position: 1420, label: 'JTC1A Rate' }]
+  JTC1ARate;
+
+  @UI.lineItem: [{ position: 1430, importance: #MEDIUM, label: 'JTC1 Amount' }]
+  @UI.identification: [{ position: 1430, label: 'JTC1 Amount' }]
+  JTC1Amount;
+
+  @UI.lineItem: [{ position: 1440, importance: #MEDIUM, label: 'ZBRK Rate' }]
+  @UI.identification: [{ position: 1440, label: 'ZBRK Rate' }]
+  ZBRKRate;
+
+  @UI.lineItem: [{ position: 1450, importance: #MEDIUM, label: 'ZBRK Amount' }]
+  @UI.identification: [{ position: 1450, label: 'ZBRK Amount' }]
+  ZBRKAmount;
+
+  @UI.lineItem: [{ position: 1460, importance: #MEDIUM, label: 'ZSNDA Rate' }]
+  @UI.identification: [{ position: 1460, label: 'ZSNDA Rate' }]
+  ZSNDARate;
+
+  @UI.lineItem: [{ position: 1470, importance: #MEDIUM, label: 'ZSNDA Amount' }]
+  @UI.identification: [{ position: 1470, label: 'ZSNDA Amount' }]
+  ZSNDAmount;
+
+  @UI.lineItem: [{ position: 1480, importance: #MEDIUM, label: 'ZDBK Rate' }]
+  @UI.identification: [{ position: 1480, label: 'ZDBK Rate' }]
+  ZDBKRate;
+
+  @UI.lineItem: [{ position: 1490, importance: #MEDIUM, label: 'ZDBK Amount' }]
+  @UI.identification: [{ position: 1490, label: 'ZDBK Amount' }]
+  ZDBKAmount;
+
+  @UI.lineItem: [{ position: 1500, importance: #MEDIUM, label: 'Total Value' }]
+  @UI.identification: [{ position: 1500, label: 'Total Value' }]
+  ZTOTVAL;
+
+  @UI.lineItem: [{ position: 1510, importance: #MEDIUM, label: 'Product Description' }]
+  @UI.identification: [{ position: 1510, label: 'Product Description' }]
+  productdesc;
+
+  @UI.lineItem: [{ position: 1520, importance: #MEDIUM, label: 'HSN Code' }]
+  @UI.identification: [{ position: 1520, label: 'HSN Code' }]
+  hsncode;
+
+
+
+}

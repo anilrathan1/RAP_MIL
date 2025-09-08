@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition for Disp regis.'
+define service ZDR_UI_DISPREG {
+  expose ZDR_C_BILLINGITEM;
+}
